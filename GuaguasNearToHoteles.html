@@ -1,0 +1,1212 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_e01b820e15c04b4680d501b754d9a4ed {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_e01b820e15c04b4680d501b754d9a4ed" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_e01b820e15c04b4680d501b754d9a4ed = L.map('map_e01b820e15c04b4680d501b754d9a4ed', {
+                                           center:[28.465971,-16.2489736],
+                                           zoom: 14,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_2c236139d0074c19bb4c1bf03b7b1d0e = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+
+        
+        
+            
+
+            var marker_a7e0b07217b040f4b7fb58a3e238cc88 = L.marker(
+                [28.4668929107,-16.2477066514],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_e599bcd785a343b18b78884bf7d49af9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a7e0b07217b040f4b7fb58a3e238cc88.setIcon(icon_e599bcd785a343b18b78884bf7d49af9);
+            
+        
+            
+            var popup_4c0b3306b7154264bcea530da143569c = L.popup({maxWidth: '300'});
+
+            
+                var html_ee4ef6aaf59144c19eb9df57eabcaec8 = $('         <div id="html_ee4ef6aaf59144c19eb9df57eabcaec8"                 style="width: 100.0%; height: 100.0%;">                 PLAZA DE ESPAÑA</div>                 ')[0];
+                popup_4c0b3306b7154264bcea530da143569c.setContent(html_ee4ef6aaf59144c19eb9df57eabcaec8);
+            
+
+            marker_a7e0b07217b040f4b7fb58a3e238cc88.bindPopup(popup_4c0b3306b7154264bcea530da143569c);
+
+            
+        
+        
+            
+
+            var marker_fa26efb0294f47799eb05ed2ca48321e = L.marker(
+                [28.467857500999997,-16.2470571148],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_0b5eaa4379394639977daabceb36f09b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fa26efb0294f47799eb05ed2ca48321e.setIcon(icon_0b5eaa4379394639977daabceb36f09b);
+            
+        
+            
+            var popup_6d54527c43194ece8d0c35b726ffc6e0 = L.popup({maxWidth: '300'});
+
+            
+                var html_869bc59aae1a4a9cb2e88e5d93b340f9 = $('         <div id="html_869bc59aae1a4a9cb2e88e5d93b340f9"                 style="width: 100.0%; height: 100.0%;">                 ALAMEDA</div>                 ')[0];
+                popup_6d54527c43194ece8d0c35b726ffc6e0.setContent(html_869bc59aae1a4a9cb2e88e5d93b340f9);
+            
+
+            marker_fa26efb0294f47799eb05ed2ca48321e.bindPopup(popup_6d54527c43194ece8d0c35b726ffc6e0);
+
+            
+        
+        
+            
+
+            var marker_d14222ea13aa40318bad4a906dfe61e0 = L.marker(
+                [28.4722127235,-16.2470327943],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_1565baab4809452991e60f6297c33a3b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d14222ea13aa40318bad4a906dfe61e0.setIcon(icon_1565baab4809452991e60f6297c33a3b);
+            
+        
+            
+            var popup_2c803a0b21c048dfa22d966ed8e663d7 = L.popup({maxWidth: '300'});
+
+            
+                var html_b6e941f17e0a4b23a7b785dba9eae5c4 = $('         <div id="html_b6e941f17e0a4b23a7b785dba9eae5c4"                 style="width: 100.0%; height: 100.0%;">                 PUNTO CRUCERO</div>                 ')[0];
+                popup_2c803a0b21c048dfa22d966ed8e663d7.setContent(html_b6e941f17e0a4b23a7b785dba9eae5c4);
+            
+
+            marker_d14222ea13aa40318bad4a906dfe61e0.bindPopup(popup_2c803a0b21c048dfa22d966ed8e663d7);
+
+            
+        
+        
+            
+
+            var marker_cc03b13828424a448a50150bfb1d4d3b = L.marker(
+                [28.474879604,-16.2465898527],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_b434daf3b9d849c9bb48c00e32fb7c4a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cc03b13828424a448a50150bfb1d4d3b.setIcon(icon_b434daf3b9d849c9bb48c00e32fb7c4a);
+            
+        
+            
+            var popup_46dbc8bffa3e4a0faba3546b60d82fb3 = L.popup({maxWidth: '300'});
+
+            
+                var html_e05107fa62a14129b66eab0f28a1f921 = $('         <div id="html_e05107fa62a14129b66eab0f28a1f921"                 style="width: 100.0%; height: 100.0%;">                 MUSEO HISTORICO MILITAR</div>                 ')[0];
+                popup_46dbc8bffa3e4a0faba3546b60d82fb3.setContent(html_e05107fa62a14129b66eab0f28a1f921);
+            
+
+            marker_cc03b13828424a448a50150bfb1d4d3b.bindPopup(popup_46dbc8bffa3e4a0faba3546b60d82fb3);
+
+            
+        
+        
+            
+
+            var marker_72517db9b5274cf4ab21e7f8552210fb = L.marker(
+                [28.4739573184,-16.2537213645],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_dd495167593b4e628a93c13213ce6d5b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_72517db9b5274cf4ab21e7f8552210fb.setIcon(icon_dd495167593b4e628a93c13213ce6d5b);
+            
+        
+            
+            var popup_993df4afa08241339023228c00847fe6 = L.popup({maxWidth: '300'});
+
+            
+                var html_d738bb0e1c3840ba82ff83c1eb49a577 = $('         <div id="html_d738bb0e1c3840ba82ff83c1eb49a577"                 style="width: 100.0%; height: 100.0%;">                 PARQUE GARCIA SANABRIA</div>                 ')[0];
+                popup_993df4afa08241339023228c00847fe6.setContent(html_d738bb0e1c3840ba82ff83c1eb49a577);
+            
+
+            marker_72517db9b5274cf4ab21e7f8552210fb.bindPopup(popup_993df4afa08241339023228c00847fe6);
+
+            
+        
+        
+            
+
+            var marker_604bbeb1fe5f44d087877fd3735f0994 = L.marker(
+                [28.4713563316,-16.2528957468],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_84cb6c3990eb49dcad24ae0924dfb0c9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_604bbeb1fe5f44d087877fd3735f0994.setIcon(icon_84cb6c3990eb49dcad24ae0924dfb0c9);
+            
+        
+            
+            var popup_63caa0f850764f8497df18ec6515bb56 = L.popup({maxWidth: '300'});
+
+            
+                var html_00c4e23ab0c141fcbee59fa5fa41469f = $('         <div id="html_00c4e23ab0c141fcbee59fa5fa41469f"                 style="width: 100.0%; height: 100.0%;">                 PARQUE GARCIA SANABRIA</div>                 ')[0];
+                popup_63caa0f850764f8497df18ec6515bb56.setContent(html_00c4e23ab0c141fcbee59fa5fa41469f);
+            
+
+            marker_604bbeb1fe5f44d087877fd3735f0994.bindPopup(popup_63caa0f850764f8497df18ec6515bb56);
+
+            
+        
+        
+            
+
+            var marker_7c2bc4b134674b2ebb317d03f26dd8ac = L.marker(
+                [28.47055487,-16.2555158353],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_c37e2006f28e4ed9ba42e3bfc0cc270a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c2bc4b134674b2ebb317d03f26dd8ac.setIcon(icon_c37e2006f28e4ed9ba42e3bfc0cc270a);
+            
+        
+            
+            var popup_9cde107ecf104e3ab932168685152125 = L.popup({maxWidth: '300'});
+
+            
+                var html_6878e7937b4b4fbabcabaaae65c5a209 = $('         <div id="html_6878e7937b4b4fbabcabaaae65c5a209"                 style="width: 100.0%; height: 100.0%;">                 PLAZA DE LOS PATOS / VIERA Y CLAVIJO</div>                 ')[0];
+                popup_9cde107ecf104e3ab932168685152125.setContent(html_6878e7937b4b4fbabcabaaae65c5a209);
+            
+
+            marker_7c2bc4b134674b2ebb317d03f26dd8ac.bindPopup(popup_9cde107ecf104e3ab932168685152125);
+
+            
+        
+        
+            
+
+            var marker_80b759f33663433bafab5186f7965af1 = L.marker(
+                [28.4662839277,-16.256328376099997],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_d7179f442e5d47fc9a87f4037cb227a7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_80b759f33663433bafab5186f7965af1.setIcon(icon_d7179f442e5d47fc9a87f4037cb227a7);
+            
+        
+            
+            var popup_b8e31a9dacaa4202ad719546e2aabfe5 = L.popup({maxWidth: '300'});
+
+            
+                var html_e0e3bba3d4c0404392be83d775de9b77 = $('         <div id="html_e0e3bba3d4c0404392be83d775de9b77"                 style="width: 100.0%; height: 100.0%;">                 PLAZA PEDRO SCHWARTZ / WEYLER</div>                 ')[0];
+                popup_b8e31a9dacaa4202ad719546e2aabfe5.setContent(html_e0e3bba3d4c0404392be83d775de9b77);
+            
+
+            marker_80b759f33663433bafab5186f7965af1.bindPopup(popup_b8e31a9dacaa4202ad719546e2aabfe5);
+
+            
+        
+        
+            
+
+            var marker_7107eb9b9b064e55aeb15e55b5f1e248 = L.marker(
+                [28.458323544299997,-16.2572312942],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_0992a7ec62b84ba091653f692ea539b3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7107eb9b9b064e55aeb15e55b5f1e248.setIcon(icon_0992a7ec62b84ba091653f692ea539b3);
+            
+        
+            
+            var popup_29d761cba49542cba37627a5b350a7e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_8914b652c9e747b3aa8a0bd8c6d34477 = $('         <div id="html_8914b652c9e747b3aa8a0bd8c6d34477"                 style="width: 100.0%; height: 100.0%;">                 AVENIDA TRES DE MAYO</div>                 ')[0];
+                popup_29d761cba49542cba37627a5b350a7e3.setContent(html_8914b652c9e747b3aa8a0bd8c6d34477);
+            
+
+            marker_7107eb9b9b064e55aeb15e55b5f1e248.bindPopup(popup_29d761cba49542cba37627a5b350a7e3);
+
+            
+        
+        
+            
+
+            var marker_972afaab35de412d99da208bff2c2ba6 = L.marker(
+                [28.4542804961,-16.2564166081],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_e052cd9e5f1d420f9856e802d9b6e50d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_972afaab35de412d99da208bff2c2ba6.setIcon(icon_e052cd9e5f1d420f9856e802d9b6e50d);
+            
+        
+            
+            var popup_e2007327fddb4b37a1305ee110e19561 = L.popup({maxWidth: '300'});
+
+            
+                var html_72bd4fe9ce4a4dd9854095d726236b5b = $('         <div id="html_72bd4fe9ce4a4dd9854095d726236b5b"                 style="width: 100.0%; height: 100.0%;">                 AUDITORIO ADAN MARTIN Y P_MARITIMO CESAR MANRIQUE</div>                 ')[0];
+                popup_e2007327fddb4b37a1305ee110e19561.setContent(html_72bd4fe9ce4a4dd9854095d726236b5b);
+            
+
+            marker_972afaab35de412d99da208bff2c2ba6.bindPopup(popup_e2007327fddb4b37a1305ee110e19561);
+
+            
+        
+        
+            
+
+            var marker_375e847a4663495da3658b0164c0b2be = L.marker(
+                [28.4595290859,-16.2542168877],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_76d2e70502544782aa6960ca1b6a70df = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_375e847a4663495da3658b0164c0b2be.setIcon(icon_76d2e70502544782aa6960ca1b6a70df);
+            
+        
+            
+            var popup_8a853774634e4c68839258ea8738a5b8 = L.popup({maxWidth: '300'});
+
+            
+                var html_f273b1ae95c1479ab791e03b14145b4a = $('         <div id="html_f273b1ae95c1479ab791e03b14145b4a"                 style="width: 100.0%; height: 100.0%;">                 EL CORTE INGLES</div>                 ')[0];
+                popup_8a853774634e4c68839258ea8738a5b8.setContent(html_f273b1ae95c1479ab791e03b14145b4a);
+            
+
+            marker_375e847a4663495da3658b0164c0b2be.bindPopup(popup_8a853774634e4c68839258ea8738a5b8);
+
+            
+        
+        
+            
+
+            var marker_c3cb7a13c53f4a80be34c9761003b7d2 = L.marker(
+                [28.4594285489,-16.2512739898],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_5ece469586c64f6d970d46e4bafd8699 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c3cb7a13c53f4a80be34c9761003b7d2.setIcon(icon_5ece469586c64f6d970d46e4bafd8699);
+            
+        
+            
+            var popup_9a44a10ed90b4040ac2700239afa901e = L.popup({maxWidth: '300'});
+
+            
+                var html_2eccc87c34dc4cbb9c9940a04d332c54 = $('         <div id="html_2eccc87c34dc4cbb9c9940a04d332c54"                 style="width: 100.0%; height: 100.0%;">                 ESTACION DE GUAGUAS</div>                 ')[0];
+                popup_9a44a10ed90b4040ac2700239afa901e.setContent(html_2eccc87c34dc4cbb9c9940a04d332c54);
+            
+
+            marker_c3cb7a13c53f4a80be34c9761003b7d2.bindPopup(popup_9a44a10ed90b4040ac2700239afa901e);
+
+            
+        
+        
+            
+
+            var marker_e3b98ef02ed54ce198f3e539128780fc = L.marker(
+                [28.463603575900002,-16.2514007941],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_69156a4057cb41699c19d4eddca12fc2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e3b98ef02ed54ce198f3e539128780fc.setIcon(icon_69156a4057cb41699c19d4eddca12fc2);
+            
+        
+            
+            var popup_81ceab129e574ba6ae0396c54e2fc66e = L.popup({maxWidth: '300'});
+
+            
+                var html_72d7444c49e54bcf9c93d3627130b735 = $('         <div id="html_72d7444c49e54bcf9c93d3627130b735"                 style="width: 100.0%; height: 100.0%;">                 MERCADO NUESTRA SEÑORA DE AFRICA / MUSEOS</div>                 ')[0];
+                popup_81ceab129e574ba6ae0396c54e2fc66e.setContent(html_72d7444c49e54bcf9c93d3627130b735);
+            
+
+            marker_e3b98ef02ed54ce198f3e539128780fc.bindPopup(popup_81ceab129e574ba6ae0396c54e2fc66e);
+
+            
+        
+        
+            
+
+            var marker_a0ad547b1c544e7d81f1da088686bd44 = L.marker(
+                [28.4749255299,-16.2531253897],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_423721f85ef94a9ab132ecfde3867d1c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a0ad547b1c544e7d81f1da088686bd44.setIcon(icon_423721f85ef94a9ab132ecfde3867d1c);
+            
+        
+            
+            var popup_5e1ba5c6af2440c4803b8ec6a10eb8d8 = L.popup({maxWidth: '300'});
+
+            
+                var html_0350be8334d349c392cf165cb4508066 = $('         <div id="html_0350be8334d349c392cf165cb4508066"                 style="width: 100.0%; height: 100.0%;">                 HOTEL MENCEY</div>                 ')[0];
+                popup_5e1ba5c6af2440c4803b8ec6a10eb8d8.setContent(html_0350be8334d349c392cf165cb4508066);
+            
+
+            marker_a0ad547b1c544e7d81f1da088686bd44.bindPopup(popup_5e1ba5c6af2440c4803b8ec6a10eb8d8);
+
+            
+        
+        
+            
+
+            var marker_88f5bfaa4a0a491686b41fc740f702a3 = L.marker(
+                [28.4666692561,-16.2489442029],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_b71917ce54aa4308aa5c61ba065584f3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_88f5bfaa4a0a491686b41fc740f702a3.setIcon(icon_b71917ce54aa4308aa5c61ba065584f3);
+            
+        
+            
+            var popup_fa33d54a2f624637a10edb6a37e6c462 = L.popup({maxWidth: '300'});
+
+            
+                var html_4f687c8f448f4f1498508501e9dde124 = $('         <div id="html_4f687c8f448f4f1498508501e9dde124"                 style="width: 100.0%; height: 100.0%;">                 HOTEL ADONIS CAPITAL</div>                 ')[0];
+                popup_fa33d54a2f624637a10edb6a37e6c462.setContent(html_4f687c8f448f4f1498508501e9dde124);
+            
+
+            marker_88f5bfaa4a0a491686b41fc740f702a3.bindPopup(popup_fa33d54a2f624637a10edb6a37e6c462);
+
+            
+        
+        
+            
+
+            var marker_be3ce287c358488b828fcdd270a3b270 = L.marker(
+                [28.4686748509,-16.2509306959],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_0c962f7c84cd45bb9df6b939683b2cae = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_be3ce287c358488b828fcdd270a3b270.setIcon(icon_0c962f7c84cd45bb9df6b939683b2cae);
+            
+        
+            
+            var popup_7cd9a3beb7cb4ddeb5997faca103ae30 = L.popup({maxWidth: '300'});
+
+            
+                var html_e68d210131f74c3c837d0bb56b96ea8c = $('         <div id="html_e68d210131f74c3c837d0bb56b96ea8c"                 style="width: 100.0%; height: 100.0%;">                 HOTEL PRINCIPE PAZ</div>                 ')[0];
+                popup_7cd9a3beb7cb4ddeb5997faca103ae30.setContent(html_e68d210131f74c3c837d0bb56b96ea8c);
+            
+
+            marker_be3ce287c358488b828fcdd270a3b270.bindPopup(popup_7cd9a3beb7cb4ddeb5997faca103ae30);
+
+            
+        
+        
+            
+
+            var marker_90fa504226e74a79ae531f1c81f8f894 = L.marker(
+                [28.463929978099998,-16.2534598718],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_87453c665c0f4091b555c877fd9387ef = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_90fa504226e74a79ae531f1c81f8f894.setIcon(icon_87453c665c0f4091b555c877fd9387ef);
+            
+        
+            
+            var popup_f6a3dfd7124a4ee9890587ed8fef8a2e = L.popup({maxWidth: '300'});
+
+            
+                var html_1c22fb044c98486d8ff5093d2d0a29bf = $('         <div id="html_1c22fb044c98486d8ff5093d2d0a29bf"                 style="width: 100.0%; height: 100.0%;">                 HOTEL TANAUSU</div>                 ')[0];
+                popup_f6a3dfd7124a4ee9890587ed8fef8a2e.setContent(html_1c22fb044c98486d8ff5093d2d0a29bf);
+            
+
+            marker_90fa504226e74a79ae531f1c81f8f894.bindPopup(popup_f6a3dfd7124a4ee9890587ed8fef8a2e);
+
+            
+        
+        
+            
+
+            var marker_db451ccfacc04206a2e1eede56d279b4 = L.marker(
+                [28.4670698487,-16.2496611636],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_5d6487b2d43e49318b10bb0d5dd61ca6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_db451ccfacc04206a2e1eede56d279b4.setIcon(icon_5d6487b2d43e49318b10bb0d5dd61ca6);
+            
+        
+            
+            var popup_156b38ca582548d7af5a47569d43917d = L.popup({maxWidth: '300'});
+
+            
+                var html_f6f780dd673645e7b34977e7e6735a7b = $('         <div id="html_f6f780dd673645e7b34977e7e6735a7b"                 style="width: 100.0%; height: 100.0%;">                 HOTEL OCEANO</div>                 ')[0];
+                popup_156b38ca582548d7af5a47569d43917d.setContent(html_f6f780dd673645e7b34977e7e6735a7b);
+            
+
+            marker_db451ccfacc04206a2e1eede56d279b4.bindPopup(popup_156b38ca582548d7af5a47569d43917d);
+
+            
+        
+        
+            
+
+            var marker_b9f0b6c3a843491799171e7a0941f2bf = L.marker(
+                [28.467083738899998,-16.2497802193],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_827c45aba8e4452c9779a238b546db3c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b9f0b6c3a843491799171e7a0941f2bf.setIcon(icon_827c45aba8e4452c9779a238b546db3c);
+            
+        
+            
+            var popup_4b24624022bc42868884d705716ab04d = L.popup({maxWidth: '300'});
+
+            
+                var html_ea2bd3314f6c449b875413b08c171918 = $('         <div id="html_ea2bd3314f6c449b875413b08c171918"                 style="width: 100.0%; height: 100.0%;">                 HOTEL ATLANTICO</div>                 ')[0];
+                popup_4b24624022bc42868884d705716ab04d.setContent(html_ea2bd3314f6c449b875413b08c171918);
+            
+
+            marker_b9f0b6c3a843491799171e7a0941f2bf.bindPopup(popup_4b24624022bc42868884d705716ab04d);
+
+            
+        
+        
+            
+
+            var marker_694ec15945514591944f8a524643aa20 = L.marker(
+                [28.4675369352,-16.248581889300002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_7772b0bfd9064ea88309af602e38412d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_694ec15945514591944f8a524643aa20.setIcon(icon_7772b0bfd9064ea88309af602e38412d);
+            
+        
+            
+            var popup_6269b50b99d3482aa9dd224e40e47536 = L.popup({maxWidth: '300'});
+
+            
+                var html_e2b4d5e834f749bc8da3764794524e0d = $('         <div id="html_e2b4d5e834f749bc8da3764794524e0d"                 style="width: 100.0%; height: 100.0%;">                 HOTEL PELINOR</div>                 ')[0];
+                popup_6269b50b99d3482aa9dd224e40e47536.setContent(html_e2b4d5e834f749bc8da3764794524e0d);
+            
+
+            marker_694ec15945514591944f8a524643aa20.bindPopup(popup_6269b50b99d3482aa9dd224e40e47536);
+
+            
+        
+        
+            
+
+            var marker_2b3f715a38254f50a5c9498ad20177f9 = L.marker(
+                [28.4672151152,-16.2487568902],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_09fd8a03df4c465d92d5222625a1506f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2b3f715a38254f50a5c9498ad20177f9.setIcon(icon_09fd8a03df4c465d92d5222625a1506f);
+            
+        
+            
+            var popup_6777f9ada8c243a993db634fba711464 = L.popup({maxWidth: '300'});
+
+            
+                var html_870faeff2e964fc3be5b047983a01560 = $('         <div id="html_870faeff2e964fc3be5b047983a01560"                 style="width: 100.0%; height: 100.0%;">                 HOTELADONIS PLAZA</div>                 ')[0];
+                popup_6777f9ada8c243a993db634fba711464.setContent(html_870faeff2e964fc3be5b047983a01560);
+            
+
+            marker_2b3f715a38254f50a5c9498ad20177f9.bindPopup(popup_6777f9ada8c243a993db634fba711464);
+
+            
+        
+        
+            
+
+            var marker_5b3a034ebb684fbc9250c8b54f7229c5 = L.marker(
+                [28.470008552600003,-16.2497208351],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_6c461b1614ee4f43804300f50da75b5d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5b3a034ebb684fbc9250c8b54f7229c5.setIcon(icon_6c461b1614ee4f43804300f50da75b5d);
+            
+        
+            
+            var popup_8192abf6cfa2488e859cde119dc6e9f5 = L.popup({maxWidth: '300'});
+
+            
+                var html_131f8f9367344cfc99d7112fbdb699ab = $('         <div id="html_131f8f9367344cfc99d7112fbdb699ab"                 style="width: 100.0%; height: 100.0%;">                 HOTEL HORIZONTE</div>                 ')[0];
+                popup_8192abf6cfa2488e859cde119dc6e9f5.setContent(html_131f8f9367344cfc99d7112fbdb699ab);
+            
+
+            marker_5b3a034ebb684fbc9250c8b54f7229c5.bindPopup(popup_8192abf6cfa2488e859cde119dc6e9f5);
+
+            
+        
+        
+            
+
+            var marker_1361389e4b3941d2a9b5844cd253158a = L.marker(
+                [28.471276553600003,-16.257125678199998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_0d3a3b40204548a1ab9b52bd8e6ba1e7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1361389e4b3941d2a9b5844cd253158a.setIcon(icon_0d3a3b40204548a1ab9b52bd8e6ba1e7);
+            
+        
+            
+            var popup_3e5211eb98284a5b8686c3d08d371535 = L.popup({maxWidth: '300'});
+
+            
+                var html_9def7d4ebf6e4fd29f2f5701f3e77d18 = $('         <div id="html_9def7d4ebf6e4fd29f2f5701f3e77d18"                 style="width: 100.0%; height: 100.0%;">                 HOTELAPARTAMENTO COLON RAMBLA</div>                 ')[0];
+                popup_3e5211eb98284a5b8686c3d08d371535.setContent(html_9def7d4ebf6e4fd29f2f5701f3e77d18);
+            
+
+            marker_1361389e4b3941d2a9b5844cd253158a.bindPopup(popup_3e5211eb98284a5b8686c3d08d371535);
+
+            
+        
+        
+            
+
+            var marker_45f4af35541842af8355fed9f183cc77 = L.marker(
+                [28.4640643477,-16.2599236265],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_a51e387e069b4ffd94a42d75cb721d9f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_45f4af35541842af8355fed9f183cc77.setIcon(icon_a51e387e069b4ffd94a42d75cb721d9f);
+            
+        
+            
+            var popup_3636984e7b564d4f8a8fe9008dc745c3 = L.popup({maxWidth: '300'});
+
+            
+                var html_1ef176821ea54d1b917df132eb49f3e6 = $('         <div id="html_1ef176821ea54d1b917df132eb49f3e6"                 style="width: 100.0%; height: 100.0%;">                 HOTEL ESCUELA SANTA CRUZ</div>                 ')[0];
+                popup_3636984e7b564d4f8a8fe9008dc745c3.setContent(html_1ef176821ea54d1b917df132eb49f3e6);
+            
+
+            marker_45f4af35541842af8355fed9f183cc77.bindPopup(popup_3636984e7b564d4f8a8fe9008dc745c3);
+
+            
+        
+        
+            
+
+            var marker_451d876cc1c04e64944531c9ce128d3f = L.marker(
+                [28.4585574167,-16.2573906007],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_7858f521c1df42aabce29da535fc5e25 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_451d876cc1c04e64944531c9ce128d3f.setIcon(icon_7858f521c1df42aabce29da535fc5e25);
+            
+        
+            
+            var popup_75c1c1c282154296ad96dc552cdff910 = L.popup({maxWidth: '300'});
+
+            
+                var html_17c4ff356ae145519ac78a213a9067d4 = $('         <div id="html_17c4ff356ae145519ac78a213a9067d4"                 style="width: 100.0%; height: 100.0%;">                 HOTEL SILKEN ATLANTIDA</div>                 ')[0];
+                popup_75c1c1c282154296ad96dc552cdff910.setContent(html_17c4ff356ae145519ac78a213a9067d4);
+            
+
+            marker_451d876cc1c04e64944531c9ce128d3f.bindPopup(popup_75c1c1c282154296ad96dc552cdff910);
+
+            
+        
+        
+            
+
+            var marker_ac70f955bf744758b0e98b400b533b88 = L.marker(
+                [28.466065860900002,-16.2484038049],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_fe985632e45148bf916f7e1dc4254f4e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ac70f955bf744758b0e98b400b533b88.setIcon(icon_fe985632e45148bf916f7e1dc4254f4e);
+            
+        
+            
+            var popup_59e989c4c8094bb4978a4cd7cf1ed9e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_88ba2f6d291a4329955627b9e1855294 = $('         <div id="html_88ba2f6d291a4329955627b9e1855294"                 style="width: 100.0%; height: 100.0%;">                 HOTEL NH TENERIFE</div>                 ')[0];
+                popup_59e989c4c8094bb4978a4cd7cf1ed9e3.setContent(html_88ba2f6d291a4329955627b9e1855294);
+            
+
+            marker_ac70f955bf744758b0e98b400b533b88.bindPopup(popup_59e989c4c8094bb4978a4cd7cf1ed9e3);
+
+            
+        
+        
+            
+
+            var marker_79cb24f4828947eda240a4853793fc9f = L.marker(
+                [28.4739846389,-16.2528175094],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_1a72f8a2e9d64d82ade8c9506b65f961 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_79cb24f4828947eda240a4853793fc9f.setIcon(icon_1a72f8a2e9d64d82ade8c9506b65f961);
+            
+        
+            
+            var popup_0c0cb4a53fa64094946bd833f665cf04 = L.popup({maxWidth: '300'});
+
+            
+                var html_03fe4818973e40c9852b3e92d8ed5114 = $('         <div id="html_03fe4818973e40c9852b3e92d8ed5114"                 style="width: 100.0%; height: 100.0%;">                 HOTEL BARCELO CONTEMPORANEO</div>                 ')[0];
+                popup_0c0cb4a53fa64094946bd833f665cf04.setContent(html_03fe4818973e40c9852b3e92d8ed5114);
+            
+
+            marker_79cb24f4828947eda240a4853793fc9f.bindPopup(popup_0c0cb4a53fa64094946bd833f665cf04);
+
+            
+        
+        
+            
+
+            var marker_7c43d39c5442408383347a5aa781f5b9 = L.marker(
+                [28.4733545063,-16.2529604858],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_3f39ad148a6e435383b8e46870c8085d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c43d39c5442408383347a5aa781f5b9.setIcon(icon_3f39ad148a6e435383b8e46870c8085d);
+            
+        
+            
+            var popup_5923f95004bf4755bcebfff2f3b1e3e2 = L.popup({maxWidth: '300'});
+
+            
+                var html_1477fbf9b60046d488ef6bbca76dcc3e = $('         <div id="html_1477fbf9b60046d488ef6bbca76dcc3e"                 style="width: 100.0%; height: 100.0%;">                 HOTEL TABURIENTE</div>                 ')[0];
+                popup_5923f95004bf4755bcebfff2f3b1e3e2.setContent(html_1477fbf9b60046d488ef6bbca76dcc3e);
+            
+
+            marker_7c43d39c5442408383347a5aa781f5b9.bindPopup(popup_5923f95004bf4755bcebfff2f3b1e3e2);
+
+            
+        
+        
+            
+
+            var marker_dbc8b1cac1f242a0954ae664e0e04d8a = L.marker(
+                [28.4794811888,-16.2461795959],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_e01b820e15c04b4680d501b754d9a4ed);
+            
+        
+            
+
+                var icon_0596807579a24bbeaa72b0116909e7bd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dbc8b1cac1f242a0954ae664e0e04d8a.setIcon(icon_0596807579a24bbeaa72b0116909e7bd);
+            
+        
+            
+            var popup_63defb6077184330b689058c3ef37e9e = L.popup({maxWidth: '300'});
+
+            
+                var html_6eb8ce0e7b504af996d7a48f0c584e03 = $('         <div id="html_6eb8ce0e7b504af996d7a48f0c584e03"                 style="width: 100.0%; height: 100.0%;">                 HOTEL NAUTICO</div>                 ')[0];
+                popup_63defb6077184330b689058c3ef37e9e.setContent(html_6eb8ce0e7b504af996d7a48f0c584e03);
+            
+
+            marker_dbc8b1cac1f242a0954ae664e0e04d8a.bindPopup(popup_63defb6077184330b689058c3ef37e9e);
+
+            
+        
+        
+        
+        </script>
+        
